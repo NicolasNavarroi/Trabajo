@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro - LosPlataformeros</title>
+  <link rel="stylesheet" href="/css/estilos.css">
+</head>
+<body>
+  <div id="header"></div>
+  <main>
+    <h2>Registro de Usuario</h2>
+    <form id="registroForm">
+      <label for="Username">Usuario:</label>
+      <input type="text" id="Username" name="Username" required>
+
+      <label for="Nombre_apellido">Nombre completo:</label>
+      <input type="text" id="Nombre_apellido" name="Nombre_apellido" required>
+
+      <label for="clave">Contraseña:</label>
+      <input type="password" id="clave" name="clave" required>
+
+      <label for="Edad">Edad:</label>
+      <input type="number" id="Edad" name="Edad" required>
+
+      <label for="Email">Correo:</label>
+      <input type="email" id="Email" name="Email" required>
+
+      <label for="Direccion">Dirección:</label>
+      <input type="text" id="Direccion" name="Direccion" required>
+
+      <label for="Telefono">Teléfono:</label>
+      <input type="tel" id="Telefono" name="Telefono" required>
+
+      <label for="id_tipo_usuario">Tipo de Usuario:</label>
+      <select id="id_tipo_usuario" name="id_tipo_usuario" required>
+        <option value="3">Cliente</option>
+        <option value="2">Empleado</option>
+        <option value="1">Administrador</option>
+      </select>
+
+      <button type="submit">Registrarse</button>
+    </form>
+  </main>
+  <div id="footer"></div>
+
+  <script src="/js/header.js"></script>
+  <script src="/js/auth.js"></script>
+  <script src="/js/footer.js"></script>
+</body>
+</html>

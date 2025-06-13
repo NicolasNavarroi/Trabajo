@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Catálogo - FERREMAS</title>
+  <link rel="stylesheet" href="/css/estilos.css">
+</head>
+<body>
+  <div id="header"></div>
+  <main>
+    <!-- Navegación de Categorías -->
+    <div class="category-nav">
+      <label for="categorySelect">Filtrar por categoría:</label>
+      <select id="categorySelect">
+        <option value="all">Todas</option>
+        <option value="promocionesContainer">Promociones</option>
+        <option value="novedadesContainer">Nuevos Lanzamientos</option>
+        <option value="cat-herramientas-manuales">Herramientas Manuales</option>
+        <option value="cat-herramientas-electricas">Herramientas Eléctricas</option>
+        <option value="cat-materiales-construccion">Materiales de Construcción</option>
+        <option value="cat-equipos-seguridad">Equipos de Seguridad</option>
+        <option value="cat-tornillos-anclajes">Tornillos y Anclajes</option>
+        <option value="cat-fijaciones-adhesivos">Fijaciones y Adhesivos</option>
+        <option value="cat-equipos-medicion">Equipos de Medición</option>
+      </select>
+    </div>
+
+    <!-- Promociones -->
+    <section id="promociones">
+      <h3>Promociones</h3>
+      <div id="promocionesContainer" class="catalogo catalogo-carousel"></div>
+    </section>
+
+    <!-- Nuevos Lanzamientos -->
+    <section id="novedades">
+      <h3>Nuevos Lanzamientos</h3>
+      <div id="novedadesContainer" class="catalogo catalogo-carousel"></div>
+    </section>
+
+    <!-- Categorías Principales -->
+    <section id="categorias">
+      <h3>Herramientas Manuales</h3>
+      <div id="cat-herramientas-manuales" class="catalogo catalogo-carousel">
+        <div class="producto">
+          <img src="/images/alicate.jpg" alt="Alicate" class="producto-img">
+          <h3>Alicate</h3>
+          <p>Set Alicates 3 unidades</p>
+          <p><strong>Precio:</strong> $12.500</p>
+          <button onclick="agregarAlCarrito('Alicate', 12500, 1)">
+            Agregar al carrito
+          </button>
+        </div>
+        <div class="producto">
+          <img src="/images/Martillos.jpg" alt="Martillos" class="producto-img">
+          <h3>Martillos</h3>
+          <p>Martillo de carpintero de 16 oz</p>
+          <p><strong>Precio:</strong> $12.000</p>
+          <button onclick="agregarAlCarrito('Martillos', 12000, 1)">
+            Agregar al carrito
+          </button>
+        </div>
+        <div class="producto">
+          <img src="/images/Serrucho.jpg" alt="Serrucho" class="producto-img">
+          <h3>Serrucho</h3>
+          <p>Serrucho manual de 20”</p>
+          <p><strong>Precio:</strong> $10.000</p>
+          <button onclick="agregarAlCarrito('Serrucho', 10000, 1)">
+            Agregar al carrito
+          </button>
+        </div>
+      </div>
+      <h3>Herramientas Eléctricas</h3>
+      <div id="cat-herramientas-electricas" class="catalogo catalogo-carousel">
+        <div class="producto">
+          <img src="/images/atornillador.jpg" alt="Atornillador" class="producto-img">
+          <h3>Atornillador</h3>
+          <p>Atornillador inalámbrico 12V</p>
+          <p><strong>Precio:</strong> $45.000</p>
+          <button onclick="agregarAlCarrito('Atornillador', 45000, 1)">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+          <img src="/images/caladora.jpg" alt="Caladora" class="producto-img">
+          <h3>Caladora</h3>
+          <p>Caladora orbital 600W</p>
+          <p><strong>Precio:</strong> $60.000</p>
+          <button onclick="agregarAlCarrito('Caladora', 60000, 1)">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+          <img src="/images/rotomartillo.jpg" alt="Rotomartillo" class="producto-img">
+          <h3>Rotomartillo</h3>
+          <p>Rotomartillo SDS 800W</p>
+          <p><strong>Precio:</strong> $75.000</p>
+          <button onclick="agregarAlCarrito('Rotomartillo', 75000, 1)">Agregar al carrito</button>
+        </div>
+      </div>
+      <h3>Materiales de Construcción</h3>
+      <div id="cat-materiales-construccion" class="catalogo catalogo-carousel">
+        <div class="producto">
+          <img src="/images/cemento.png" alt="Cemento" class="producto-img">
+          <h3>Cemento</h3>
+          <p>Saco de cemento Portland 50kg</p>
+          <p><strong>Precio:</strong> $4.500</p>
+          <button onclick="agregarAlCarrito('Cemento', 4500, 1)">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+          <img src="/images/grava.jpg" alt="Grava" class="producto-img">
+          <h3>Grava</h3>
+          <p>Bolsa de grava fina 20kg</p>
+          <p><strong>Precio:</strong> $3.200</p>
+          <button onclick="agregarAlCarrito('Grava', 3200, 1)">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+          <img src="/images/madera.jpg" alt="Madera" class="producto-img">
+          <h3>Madera</h3>
+          <p>Tabla de madera pino 2x4" x 2m</p>
+          <p><strong>Precio:</strong> $6.800</p>
+          <button onclick="agregarAlCarrito('Madera', 6800, 1)">Agregar al carrito</button>
+        </div>
+      </div>
+      <h3>Equipos de Seguridad</h3>
+      <div id="cat-equipos-seguridad" class="catalogo catalogo-carousel">
+        <div class="producto">
+          <img src="/images/casco.jpg" alt="Casco de seguridad" class="producto-img">
+          <h3>Casco de Seguridad</h3>
+          <p>Casco con ajuste ratchet y visera</p>
+          <p><strong>Precio:</strong> $9.200</p>
+          <button onclick="agregarAlCarrito('Casco de Seguridad', 9200, 1)">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+          <img src="/images/lentes.jpg" alt="Lentes de seguridad" class="producto-img">
+          <h3>Lentes de Seguridad</h3>
+          <p>Protección anti-impacto categoría 2</p>
+          <p><strong>Precio:</strong> $5.500</p>
+          <button onclick="agregarAlCarrito('Lentes de Seguridad', 5500, 1)">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+          <img src="/images/chaleco.jpg" alt="Chaleco reflectante" class="producto-img">
+          <h3>Chaleco Reflectante</h3>
+          <p>Chaleco con bandas reflectantes nivel 2</p>
+          <p><strong>Precio:</strong> $7.000</p>
+          <button onclick="agregarAlCarrito('Chaleco Reflectante', 7000, 1)">Agregar al carrito</button>
+        </div>
+      </div>
+      <h3>Tornillos y Anclajes</h3>
+      <div id="cat-tornillos-anclajes" class="catalogo catalogo-carousel">
+        <div class="producto">
+          <img src="/images/tornillos.jpg" alt="Tornillos" class="producto-img">
+          <h3>Tornillos</h3>
+          <p>Paquete de tornillos surtidos 100 unidades</p>
+          <p><strong>Precio:</strong> $2.500</p>
+          <button onclick="agregarAlCarrito('Tornillos', 2500, 1)">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+          <img src="/images/clavos.jpg" alt="Clavos" class="producto-img">
+          <h3>Clavos</h3>
+          <p>Bolsa de clavos 500 gr</p>
+          <p><strong>Precio:</strong> $1.800</p>
+          <button onclick="agregarAlCarrito('Clavos', 1800, 1)">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+          <img src="/images/sargento.jpg" alt="Sargento" class="producto-img">
+          <h3>Sargento</h3>
+          <p>Sargento de carpintero 50 cm</p>
+          <p><strong>Precio:</strong> $6.200</p>
+          <button onclick="agregarAlCarrito('Sargento', 6200, 1)">Agregar al carrito</button>
+        </div>
+      </div>
+      <h3>Fijaciones y Adhesivos</h3>
+      <div id="cat-fijaciones-adhesivos" class="catalogo catalogo-carousel">
+        <div class="producto">
+          <img src="/images/poliuretano.jpg" alt="Poliuretano" class="producto-img">
+          <h3>Poliuretano</h3>
+          <p>Sellador de poliuretano de 300ml</p>
+          <p><strong>Precio:</strong> $6.500</p>
+          <button onclick="agregarAlCarrito('Poliuretano', 6500, 1)">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+          <img src="/images/cola.jpg" alt="Cola para madera" class="producto-img">
+          <h3>Cola para Madera</h3>
+          <p>Adhesivo blanco vinílico 500g</p>
+          <p><strong>Precio:</strong> $4.200</p>
+          <button onclick="agregarAlCarrito('Cola para Madera', 4200, 1)">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+          <img src="/images/montaje.jpg" alt="Adhesivo de montaje" class="producto-img">
+          <h3>Adhesivo de Montaje</h3>
+          <p>Adhesivo de montaje extra fuerte 290ml</p>
+          <p><strong>Precio:</strong> $7.800</p>
+          <button onclick="agregarAlCarrito('Adhesivo de Montaje', 7800, 1)">Agregar al carrito</button>
+        </div>
+      </div>
+      <h3>Equipos de Medición</h3>
+      <div id="cat-equipos-medicion" class="catalogo catalogo-carousel">
+        <div class="producto">
+          <img src="/images/voltimetro.jpg" alt="Volímetro Digital" class="producto-img">
+          <h3>Volímetro Digital</h3>
+          <p>Volímetro digital multiuso 600V</p>
+          <p><strong>Precio:</strong> $18.000</p>
+          <button onclick="agregarAlCarrito('Volímetro Digital', 18000, 1)">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+          <img src="/images/marcar.jpg" alt="Marcador Láser" class="producto-img">
+          <h3>Marcador Láser</h3>
+          <p>Marcador láser de líneas cruzadas 360°</p>
+          <p><strong>Precio:</strong> $42.500</p>
+          <button onclick="agregarAlCarrito('Marcador Láser', 42500, 1)">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+          <img src="/images/laser.jpg" alt="Nivel Láser" class="producto-img">
+          <h3>Nivel Láser</h3>
+          <p>Nivel láser autonivelante 30m</p>
+          <p><strong>Precio:</strong> $55.000</p>
+          <button onclick="agregarAlCarrito('Nivel Láser', 55000, 1)">Agregar al carrito</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div id="footer"></div>
+
+  <script src="/js/header.js"></script>
+  <script src="/js/carrito.js"></script>
+  <script src="/js/footer.js"></script>
+</body>
+</html>
