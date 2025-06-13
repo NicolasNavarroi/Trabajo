@@ -1,0 +1,95 @@
+
+1.- Usuario
+POST:	http://localhost:3000/usuario/crear
+
+	{
+  		"Nombre": "Juan Pérez",
+  		"Email": "juan@example.com",
+  		"Clave": "123456",
+  		"id_tipo_usuario": 2
+	}
+
+
+GET (Listado): http://localhost:3000/categoria/listar
+GET (ID): http://localhost:3000/categoria/1
+
+PUT: http://localhost:3000/usuario/editar/2 (La forma es igual que la de POST)
+DELETE: http://localhost:3000/usuario/eliminar/2
+
+2.- Categoría
+POST:	http://localhost:3000/categoria/crear
+
+	{
+        	"nombre": "Makita",
+        	"descripcion": "Marca Herramientas",
+        	"logo": "Makita.png"
+    	}
+
+GET (Listado): http://localhost:3000/categoria/listar
+GET (ID): http://localhost:3000/categoria/1
+
+PUT: http://localhost:3000/categoria/editar/2 (La forma es igual que la de POST)
+DELETE: http://localhost:3000/categoria/eliminar/2
+
+3.- Marca
+POST: http://localhost:3000/api/categorias/crear
+
+        {
+            "id_categoria": 2,
+            "nombre": "Herramientas",
+            "descripcion": "Herramientas y Tornillos"
+        }
+
+GET (Listado): http://localhost:3000/api/categorias/listar
+GET (ID): http://localhost:3000/api/categorias/1
+
+PUT: http://localhost:3000/api/categorias/editar/2 (La forma es igual que la de POST)
+DELETE: http://localhost:3000/api/categorias/eliminar/2
+
+4.- Tarjeta:
+POST: http://localhost:3000/api/tarjetas/crear
+
+	{
+            "Numero_tarjeta": "3333666699993333",
+            "Nombre_titular": "Agustin Cavieres",
+            "Fecha_exp": "2026-12-31T03:00:00.000Z",
+            "cvv": 321,
+            "Usuario_idUsuario": 2
+        }
+
+GET (Listado): http://localhost:3000/api/tarjetas/listar
+GET (ID): http://localhost:3000/api/tarjetas/1
+
+PUT: http://localhost:3000/api/tarjetas/editar/2 (La forma es igual que la de POST)
+
+DELETE: http://localhost:3000/api/tarjetas/eliminar/2
+
+6.- Producto
+POST: http://localhost:3000/api/productos/crear
+
+	{         
+            "Codigo_producto": "H001",
+            "nombre": "Martillo",
+            "Descripcion": "Un Martillo",
+            "id_categoria": 2,
+            "id_marca": 2,
+            "Precio": "45.99",
+            "Stock": 100,
+            "Imagen": "Martillo.png",
+            "Fecha_ingreso": "2025-05-10T12:15:00.000Z"
+        }
+
+GET (Listado): http://localhost:3000/api/productos/listar
+GET (ID): http://localhost:3000/api/productos/1
+
+PUT: http://localhost:3000/api/productos/editar/2 (La forma es igual que la de POST)
+DELETE: http://localhost:3000/api/productos/eliminar/2
+
+7.- Verificador (Cambien los datos con los de la base de datos, si no les dara error por datos no coinciden)
+POST: http://localhost:3000/verificador/login
+
+	{
+  		"email": "juan@example.com",
+  		"clave": "123456"
+	}
+

@@ -1,0 +1,4 @@
+npm install
+npm install dotenv
+npm install axios
+si se acaban los request ir a .env y cambiar la apikey (currencylayer) nueva cuenta, dashboard y copiar la apikey
